@@ -5,6 +5,7 @@ import random
 import string
 import pyperclip
 
+
 def generate_password():
     length = scale_length.get()
     if var.get() == 0:
@@ -16,10 +17,12 @@ def generate_password():
     entry_password.delete(0, tk.END)
     entry_password.insert(0, password)
 
+
 def copy_to_clipboard():
     password = entry_password.get()
     pyperclip.copy(password)
     messagebox.showinfo("Скопировано", "Пароль скопирован в буфер обмена")
+
 
 root = tk.Tk()
 root.title("Генератор паролей")
